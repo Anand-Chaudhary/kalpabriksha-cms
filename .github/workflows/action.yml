@@ -17,9 +17,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
-      # ---------------- FRONTEND ----------------
+      # FRONTEND
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: npm install
@@ -28,7 +27,7 @@ jobs:
         working-directory: ./frontend
         run: npm run build
 
-      # ---------------- BACKEND ----------------
+      # BACKEND
       - name: Install backend dependencies
         working-directory: ./backend
         run: npm install
