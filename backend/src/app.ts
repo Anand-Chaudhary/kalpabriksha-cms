@@ -3,8 +3,10 @@ import dotenv from 'dotenv';
 import morgan from 'morgan'
 import cors from 'cors'
 import cookie from 'cookie-parser'
+import supabase from './db/dbConnect'
 
 dotenv.config()
+console.log(supabase)
 
 const app = express();
 
