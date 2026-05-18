@@ -4,6 +4,7 @@ import morgan from 'morgan'
 import cors from 'cors'
 import cookie from 'cookie-parser'
 import supabase from './db/dbConnect'
+import authRoutes from './routes/auth.routes'
 
 dotenv.config()
 console.log(supabase)
@@ -26,6 +27,8 @@ app.use(cors({
     credentials: true
 }));
 app.use(cookie())
+
+app.use('/auth', authRoutes)
 
 app.get("/", (_, res) => {
   res.send("Server is running");
