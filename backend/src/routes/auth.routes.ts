@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { body } from "express-validator";
-import * as authServices from "../services/auth.services"
+import * as authServices from "../services/auth.service"
 
 const router = Router()
 

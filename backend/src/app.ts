@@ -5,6 +5,7 @@ import cors from 'cors'
 import cookie from 'cookie-parser'
 import supabase from './db/dbConnect'
 import authRoutes from './routes/auth.routes'
+import galleryRoutes from './routes/gallery.routes'
 
 dotenv.config()
 console.log(supabase)
@@ -29,6 +30,7 @@ app.use(cors({
 app.use(cookie())
 
 app.use('/auth', authRoutes)
+app.use('/gallery', galleryRoutes)
 
 app.get("/", (_, res) => {
   res.send("Server is running");
