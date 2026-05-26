@@ -9,7 +9,6 @@ export const authMiddleware = async (req: any, res: any, next: any) => {
 
   const supabase = createSupabaseServerClient(req, res)
 
-  // 🔥 KEY FIX: pass token directly
   const { data, error } = await supabase.auth.getUser(token)
 
   if (error || !data.user) {
