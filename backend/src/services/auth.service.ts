@@ -1,5 +1,6 @@
 import { Request, Response } from "express"
 import supabase from "../db/dbConnect";
+import { cookie } from "express-validator";
 
 export const RegisterUser = async (req: Request, res: Response) => {
   const { email, password } = req.body
